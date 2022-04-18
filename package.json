@@ -2,6 +2,11 @@
   "name": "markdown-reports",
   "displayName": "Markdown Reports",
   "description": "Useful add-ons to write reports in Markdown",
+  "repository": {
+    "url": "https://github.com/kyori19/markdown-reports.git"
+  },
+  "publisher": "kyori19",
+  "license": "MIT",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.66.0"
