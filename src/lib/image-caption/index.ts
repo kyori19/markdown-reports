@@ -13,6 +13,14 @@ const imageCaptionPlugin: PluginSimple = (md) => {
       </figure>
     `;
   });
+
+  extendImageRule(md, (defaultRule) => (tokens, idx, options, env, self) => {
+    const token = tokens[idx];
+    const styles = token.attrGet('style')?.trim()?.split(';') || [];
+    styles.push('display: block', 'margin: auto');
+    token.attrSet('style', styles.join(';'));
+    return defaultRule(tokens, idx, options, env, self);
+  });
 };
 
 const extendImageRule = (md: MarkdownIt, customRule: (defaultRule: Renderer.RenderRule) => Renderer.RenderRule) => {

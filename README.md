@@ -15,3 +15,7 @@ Adds an image title under the image.
 ```
 
 ![Sample of a image caption](docs/image-caption.png)
+
+### Centerize images
+
+Adds `display: block; margin: auto` to all images.
